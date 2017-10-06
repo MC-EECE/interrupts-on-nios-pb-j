@@ -139,10 +139,16 @@ ACDS_VERSION := 16.0
 # Define path to the application ELF. 
 # It may be used by the makefile fragments so is defined before including them. 
 # 
-ELF := InterruptsNIOS.elf
+ELF := interruptsinc.elf
 
 # Paths to C, C++, and assembly source files.
-C_SRCS :=
+C_SRCS += HexDisplay.c
+C_SRCS += InterruptDemo.c
+C_SRCS += buttonISR.c
+C_SRCS += lcd.c
+C_SRCS += seven_seg_bcd.c
+C_SRCS += seven_seg_hex.c
+C_SRCS += timerISR.c
 CXX_SRCS :=
 ASM_SRCS :=
 
@@ -177,7 +183,7 @@ CRT0 :=
 SYS_LIB :=
 
 # Define path to the root of the BSP.
-BSP_ROOT_DIR := C:/Users/arvid.bushati/InterruptsNIOS_bsp/
+BSP_ROOT_DIR := ../../../Interrupts_bsp
 
 # List of application specific include directories, library directories and library names
 APP_INCLUDE_DIRS :=
